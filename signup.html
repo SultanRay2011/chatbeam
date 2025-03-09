@@ -2,34 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Sign Up - ChatBeam</title>
+  <title>Chatbeam - Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Sign Up for ChatBeam</h1>
-  </header>
-  <main>
+  <div class="form-container">
+    <h2>Create Your Chatbeam Account</h2>
     <form id="signupForm">
-      <label for="username">Username:</label>
-      <input type="text" id="username" placeholder="Username" required>
-      
-      <label for="displayName">Display Name:</label>
-      <input type="text" id="displayName" placeholder="Display Name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" placeholder="Email" required>
-      
-      <label for="password">Password:</label>
-      <input type="password" id="password" placeholder="Password" required>
-      
-      <label for="confirmPassword">Re-enter Password:</label>
-      <input type="password" id="confirmPassword" placeholder="Re-enter Password" required>
-      
+      <input type="text" id="signupUsername" placeholder="Username" required>
+      <input type="text" id="signupDisplayName" placeholder="Display Name" required>
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <input type="password" id="signupRePassword" placeholder="Re-enter Password" required>
       <button type="submit">Sign Up</button>
     </form>
-    <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
-  </main>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
