@@ -2,27 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Dashboard - ChatBeam</title>
+  <title>Chatbeam - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>ChatBeam</h1>
-    <nav>
-      <button id="pendingButton">Pending</button>
-      <button id="addFriendsButton">Add Friends</button>
-    </nav>
+  <header class="dashboard-header">
+    <div class="welcome-msg">
+      <span id="welcomeMessage"></span>
+    </div>
+    <button id="logoutBtn" class="btn-logout">Logout</button>
   </header>
-  <main>
-    <aside id="friendsList">
-      <h2>Friends List</h2>
-      <p class="no-friends">Looks like you don't have any friends yet.</p>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="friend-header">
+        <h3>Friends</h3>
+        <div class="friend-options">
+          <span class="pending">Pending</span>
+          <span class="add-friend">Add Friend</span>
+        </div>
+      </div>
+      <ul id="friendList">
+        <!-- Friend list items will be injected here -->
+      </ul>
+      <div id="noFriendsMessage" class="no-friends"><em>Looks like you have no friends.</em></div>
+      <form id="addFriendForm">
+        <input type="text" id="friendName" placeholder="Enter friend username" required>
+        <button type="submit">Add</button>
+      </form>
     </aside>
-    <section id="content">
-      <h2>Welcome to ChatBeam!</h2>
-      <p>Select an option above to get started.</p>
-    </section>
-  </main>
+    <main class="chat-area">
+      <h3 id="chatHeader">Select a friend to chat</h3>
+      <div id="chatMessages" class="chat-messages">
+        <!-- Chat messages will appear here -->
+      </div>
+      <form id="messageForm">
+        <input type="text" id="messageInput" placeholder="Type your message" required>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
